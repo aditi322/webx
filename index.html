@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Bliss | Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f8f0f5;
+            text-align: center;
+        }
+        header {
+            background: #e75480;
+            padding: 20px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .category {
+            margin: 20px auto;
+            padding: 10px;
+            background: white;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.3s;
+            border: 2px solid #e75480;
+            color: #e75480;
+            padding: 10px 20px;
+        }
+        .category:hover {
+            background: #e75480;
+            color: white;
+        }
+        .product-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .product {
+            background: white;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 10px;
+            width: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Beauty Bliss</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <h2>Our Categories</h2>
+
+    <!-- Categories -->
+    <div>
+        <div class="category" onclick="showProducts('lipsticks')">Lipsticks</div>
+        <div class="category" onclick="showProducts('skincare')">Skincare</div>
+        <div class="category" onclick="showProducts('makeup')">Makeup</div>
+    </div>
+
+    <!-- Lipsticks -->
+    <div id="lipsticks" class="product-container">
+        <h2>Lipsticks</h2>
+        <div class="product">
+            <img src="lipstick1.jpg" alt="Red Matte Lipstick">
+            <p>Red Matte Lipstick - ₹499</p>
+        </div>
+        <div class="product">
+            <img src="lipstick2.jpg" alt="Nude Glossy Lipstick">
+            <p>Nude Glossy Lipstick - ₹599</p>
+        </div>
+    </div>
+
+    <!-- Skincare -->
+    <div id="skincare" class="product-container">
+        <h2>Skincare</h2>
+        <div class="product">
+            <img src="skincare1.jpg" alt="Hydrating Moisturizer">
+            <p>Hydrating Moisturizer - ₹799</p>
+        </div>
+        <div class="product">
+            <img src="skincare2.jpg" alt="Vitamin C Serum">
+            <p>Vitamin C Serum - ₹999</p>
+        </div>
+    </div>
+
+    <!-- Makeup -->
+    <div id="makeup" class="product-container">
+        <h2>Makeup</h2>
+        <div class="product">
+            <img src="makeup1.jpg" alt="Foundation">
+            <p>Full Coverage Foundation - ₹1299</p>
+        </div>
+        <div class="product">
+            <img src="makeup2.jpg" alt="Mascara">
+            <p>Waterproof Mascara - ₹699</p>
+        </div>
+    </div>
+
+    <script>
+        function showProducts(category) {
+            // Hide all product sections
+            document.querySelectorAll('.product-container').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected category
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
